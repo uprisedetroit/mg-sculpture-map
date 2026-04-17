@@ -207,9 +207,9 @@
     }
 
     .marker-frame {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+      width: 56px;
+      height: 80px;
+      border-radius: 999px;
       overflow: hidden;
       border: 4px solid var(--fallback);
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
@@ -277,8 +277,8 @@
       }
 
       .marker-frame {
-        width: 56px;
-        height: 56px;
+        width: 48px;
+        height: 68px;
       }
     }
   </style>
@@ -433,9 +433,9 @@
             ${buildImageMarkup(imageUrl, title)}
           </div>
         `,
-        iconSize: [64, 64],
-        iconAnchor: [32, 32],
-        popupAnchor: [0, -26]
+        iconSize: [56, 80],
+        iconAnchor: [28, 80],
+        popupAnchor: [0, -84]
       });
     }
 
