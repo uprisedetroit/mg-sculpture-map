@@ -268,12 +268,37 @@
       display: none;
     }
 
+    /* ── Mobile: stack header above map ── */
     @media (max-width: 640px) {
+      html,
+      body {
+        height: 100%;
+      }
+
+      #app {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+      }
+
       .map-header {
-        top: 10px;
-        left: 10px;
-        right: 10px;
+        /* Remove absolute positioning so it flows above the map */
+        position: static;
+        top: auto;
+        left: auto;
         max-width: none;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        backdrop-filter: none;
+        flex-shrink: 0;
+      }
+
+      #map {
+        flex: 1;
+        min-height: 0;
       }
 
       .marker-frame {
